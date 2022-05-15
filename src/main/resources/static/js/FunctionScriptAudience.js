@@ -14,7 +14,7 @@ function agregarAuditorio() {
         }  
         let datosPeticion=JSON.stringify(datos);
         $.ajax({
-            url:"http://localhost:8080/api/Audience/save",
+            url:"http://158.101.30.210:8080/api/Audience/save",
             data:datosPeticion,
             type:"POST",
             dataType: 'json',
@@ -47,7 +47,7 @@ function listarAuditorio() {
     // $("#botonUpdateAuditorio").hide();
 
     $.ajax({
-        url:"http://localhost:8080/api/Audience/all",
+        url:"http://158.101.30.210:8080/api/Audience/all",
         Type:'GET',
         dataType:"json",
 
@@ -103,7 +103,7 @@ function editarRegistroAuditorio(numID) {
     $("#AnumID").hide();
     
     $.ajax({
-        url:"http://localhost:8080/api/Audience/"+numID,
+        url:"http://158.101.30.210:8080/api/Audience/"+numID,
         type:'GET',
         dataType:'json',
     
@@ -141,7 +141,7 @@ function actualizarRegistroAuditorio() {
     let datosPeticion=JSON.stringify(datos);
 
     $.ajax({
-        url:"http://localhost:8080/api/Audience/update",
+        url:"http://158.101.30.210:8080/api/Audience/update",
         data:datosPeticion,
         type:'PUT',
         dataType:'json',
@@ -180,7 +180,7 @@ function borrarRegistroAuditorio(numID) {
     let datosPeticion=JSON.stringify(datos);
 
     $.ajax({
-        url:"http://localhost:8080/api/Audience/"+numID,
+        url:"http://158.101.30.210:8080/api/Audience/"+numID,
         data:datosPeticion,
         type:'DELETE',
         contentType:"application/JSON",
@@ -210,7 +210,7 @@ function borrarRegistroAuditorio(numID) {
 function autoRelacionAuditorio() {
     console.log("Se esta ejecutando Auditorio...")
     $.ajax({
-        url:"http://localhost:8080/api/Audience/all",
+        url:"http://158.101.30.210:8080/api/Audience/all",
         type:"GET",
         datatype:"JSON",
         

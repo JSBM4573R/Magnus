@@ -52,7 +52,7 @@ function Login() {
         })
     } else {
         $.ajax({
-            url: `http://localhost:8080/api/user/${email}/${password}`,
+            url: `http://158.101.30.210:8080/api/user/${email}/${password}`,
             Type: "GET",
             dataType: "JSON",
             success: function (respuesta) {
@@ -82,7 +82,7 @@ login.addEventListener("click", (e) => {
     } else {
         e.preventDefault();
         $.ajax({
-            url: `http://localhost:8080/api/user/${email}/${password}`,
+            url: `http://158.101.30.210:8080/api/user/${email}/${password}`,
             Type: "GET",
             dataType: "JSON",
             success: function (respuesta) {
@@ -131,7 +131,7 @@ function registrar() {
             })
             setTimeout(() => {
                 $.ajax({
-                    url: 'http://localhost:8080/api/user/new',
+                    url: 'http://158.101.30.210:8080/api/user/new',
                     type: 'POST',
                     dataType: 'JSON',
                     contentType: 'application/JSON; charset=utf-8',
@@ -214,7 +214,7 @@ function validateCredentials(request) {
 function validateRegister() {
     var email = $('#user_email_register').val()
     $.ajax({
-        url: `http://localhost:8080/api/user/${email}`,
+        url: `http://158.101.30.210:8080/api/user/${email}`,
         type: 'get',
         dataType: 'json',
         success: function (request) {
