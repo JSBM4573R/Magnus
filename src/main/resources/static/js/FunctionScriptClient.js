@@ -13,7 +13,7 @@ function agregarClient() {
         }
         let datosPeticion=JSON.stringify(datos);
         $.ajax({
-            url:"http://localhost:8080/api/Client/save",
+            url:"http://158.101.30.210:8080/api/Client/save",
             data:datosPeticion,
             type:"POST",
             contentType:"application/JSON; charset=utf-8",
@@ -41,7 +41,7 @@ function listarClient() {
     // $("#botonUpdateClient").hide();
 
     $.ajax({
-        url:"http://localhost:8080/api/Client/all",
+        url:"http://158.101.30.210:8080/api/Client/all",
         Type:"GET",
         dataType:"json",
         success:function (respuesta) {
@@ -87,7 +87,7 @@ function editarRegistroClient(ClientID) {
     $("#Cemail").prop('disabled', true);
 
     $.ajax({
-        url:"http://localhost:8080/api/Client/"+ClientID,
+        url:"http://158.101.30.210:8080/api/Client/"+ClientID,
         type:'GET',
         dataType:'json',
         success:function (respuesta) {
@@ -119,7 +119,7 @@ function actualizarRegistroClient() {
     }
     let datosPeticion=JSON.stringify(datos);
     $.ajax({
-        url:"http://localhost:8080/api/Client/update",
+        url:"http://158.101.30.210:8080/api/Client/update",
         data:datosPeticion,
         type:'PUT',
         contentType:'application/JSON',
@@ -154,7 +154,7 @@ function borrarRegistroClient(ClientID) {
     }
     let datosPeticion=JSON.stringify(datos);
     $.ajax({
-        url:"http://localhost:8080/api/Client/"+ClientID,
+        url:"http://158.101.30.210:8080/api/Client/"+ClientID,
         data:datosPeticion,
         type:"DELETE",
         contentType:"application/JSON",
@@ -179,7 +179,7 @@ function borrarRegistroClient(ClientID) {
 function autoInicioCliente() {
     console.log("Se esta ejecutando client...")
     $.ajax({
-        url:"http://localhost:8080/api/Client/all",
+        url:"http://158.101.30.210:8080/api/Client/all",
         datatype:"JSON",
         Type:"GET",
         success:function(respuesta){

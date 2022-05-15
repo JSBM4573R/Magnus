@@ -14,7 +14,7 @@ function agregarReservation() {
         }
         let datosPeticion=JSON.stringify(datos);
         $.ajax({
-            url:"http://localhost:8080/api/Reservation/save",
+            url:"http://158.101.30.210:8080/api/Reservation/save",
             data:datosPeticion,
             type:"POST",
             contentType:"application/JSON",
@@ -39,7 +39,7 @@ function agregarReservation() {
 
 function listarReservation() {
     $.ajax({
-        url:"http://localhost:8080/api/Reservation/all",
+        url:"http://158.101.30.210:8080/api/Reservation/all",
         Type:"GET",
         dataType:"json",
         success:function (respuesta) {
@@ -92,7 +92,7 @@ function editarRegistroReservation(ReservationID) {
     $("#select2-Raudience").prop('disabled', true);
     // $("#reservationID").prop('disabled', true);
     $.ajax({
-        url:"http://localhost:8080/api/Reservation/"+ReservationID,
+        url:"http://158.101.30.210:8080/api/Reservation/"+ReservationID,
         type:'GET',
         dataType:'json',
         success:function (respuesta) {
@@ -125,7 +125,7 @@ function actualizarRegistroReservation() {
     }
     let datosPeticion=JSON.stringify(datos);
     $.ajax({
-        url:"http://localhost:8080/api/Reservation/update",
+        url:"http://158.101.30.210:8080/api/Reservation/update",
         data:datosPeticion,
         type:'PUT',
         contentType:'application/JSON',
@@ -152,7 +152,7 @@ function borrarRegistroReservation(reservationID) {
     }
     let datosPeticion=JSON.stringify(datos);
     $.ajax({
-        url:"http://localhost:8080/api/Reservation/"+reservationID,
+        url:"http://158.101.30.210:8080/api/Reservation/"+reservationID,
         data:datosPeticion,
         type:"DELETE",
         contentType:"application/JSON",

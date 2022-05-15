@@ -12,7 +12,7 @@ function agregarCategory() {
 
         let datosPeticion=JSON.stringify(datos);
         $.ajax({
-            url:"http://localhost:8080/api/Category/save",
+            url:"http://158.101.30.210:8080/api/Category/save",
             data:datosPeticion,
             type:"POST",
             contentType:"application/JSON; charset=utf-8",
@@ -41,7 +41,7 @@ function listarCategory() {
     // $("#botonUpdateCategory").hide();
 
     $.ajax({
-        url:"http://localhost:8080/api/Category/all",
+        url:"http://158.101.30.210:8080/api/Category/all",
         Type:"GET",
         dataType:"json",
         success:function (respuesta) {
@@ -88,7 +88,7 @@ function editarRegistroCategory(CategoryID) {
     // $("#btn-listarCategory").hide();
     
     $.ajax({
-        url:"http://localhost:8080/api/Category/"+CategoryID,
+        url:"http://158.101.30.210:8080/api/Category/"+CategoryID,
         type:'GET',
         dataType:'json',
         success:function (respuesta) {
@@ -115,7 +115,7 @@ function actualizarRegistroCategory() {
     }
     let datosPeticion=JSON.stringify(datos);
     $.ajax({
-        url:"http://localhost:8080/api/Category/update",
+        url:"http://158.101.30.210:8080/api/Category/update",
         data:datosPeticion,
         type:'PUT',
         contentType:'application/JSON',
@@ -150,7 +150,7 @@ function borrarRegistroCategory(CategoryID) {
     }
     let datosPeticion=JSON.stringify(datos);
     $.ajax({
-        url:"http://localhost:8080/api/Category/"+CategoryID,
+        url:"http://158.101.30.210:8080/api/Category/"+CategoryID,
         data:datosPeticion,
         type:"DELETE",
         contentType:"application/JSON",
@@ -179,7 +179,7 @@ function borrarRegistroCategory(CategoryID) {
 function autoInicioCategoria(){
     console.log("se esta ejecutando category...")
     $.ajax({
-        url:"http://localhost:8080/api/Category/all",
+        url:"http://158.101.30.210:8080/api/Category/all",
         type:"GET",
         datatype:"JSON",
         success:function(respuesta){

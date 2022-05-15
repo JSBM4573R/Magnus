@@ -12,7 +12,7 @@ function agregarMessage() {
         }
         let datosPeticion=JSON.stringify(datos);
         $.ajax({
-            url:"http://localhost:8080/api/Message/save",
+            url:"http://158.101.30.210:8080/api/Message/save",
             data:datosPeticion,
             type:"POST",
             contentType:"application/JSON; charset=utf-8",
@@ -40,7 +40,7 @@ function listarMessage() {
     // $("#botonUpdateMessage").hide();
 
     $.ajax({
-        url:"http://localhost:8080/api/Message/all",
+        url:"http://158.101.30.210:8080/api/Message/all",
         Type:"GET",
         dataType:"json",
         success:function (respuesta) {
@@ -90,7 +90,7 @@ function editarRegistroMessage(MessageID) {
     $("#select1-Maudience").prop('disabled', true);
     // $("#MessageID").prop('disabled', true);
     $.ajax({
-        url:"http://localhost:8080/api/Message/"+MessageID,
+        url:"http://158.101.30.210:8080/api/Message/"+MessageID,
         type:'GET',
         dataType:'json',
         success:function (respuesta) {
@@ -119,7 +119,7 @@ function actualizarRegistroMessage() {
     }
     let datosPeticion=JSON.stringify(datos);
     $.ajax({
-        url:"http://localhost:8080/api/Message/update",
+        url:"http://158.101.30.210:8080/api/Message/update",
         data:datosPeticion,
         type:'PUT',
         contentType:'application/JSON',
@@ -150,7 +150,7 @@ function borrarRegistroMessage(MessageID) {
     }
     let datosPeticion=JSON.stringify(datos);
     $.ajax({
-        url:"http://localhost:8080/api/Message/"+MessageID,
+        url:"http://158.101.30.210:8080/api/Message/"+MessageID,
         data:datosPeticion,
         type:"DELETE",
         contentType:"application/JSON",

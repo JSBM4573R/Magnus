@@ -12,7 +12,7 @@ $(document).ready(function () {
 // get name before autenticate credentials with GitHub token OAuth2
 function nameOAuth2Validate() {
     $.ajax({
-        url:`http://localhost:8080/OAuth2User`,
+        url:`http://158.101.30.210:8080/OAuth2User`,
         type:'get',
         dataType:'json',
         success:function(request){
@@ -43,7 +43,7 @@ sidebarBtn.addEventListener("click", () => {
 // logout method post /logout with ajax
 function logoutPost() {
     $.ajax({
-        url:`http://localhost:8080/logout`,
+        url:`http://158.101.30.210:8080/logout`,
         type:'post',
         success:function(request) {
             console.log(request)
