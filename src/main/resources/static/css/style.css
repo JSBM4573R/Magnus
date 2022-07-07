@@ -235,16 +235,6 @@ body {
 
 
 /* Home section */
-.home-section .home-content{
-  height: 3.75rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #fcfbff;
-  box-shadow: .125rem .125rem .125rem .0625rem rgba(0, 0, 0, 0.2);
-  
-}
-
 .header {
   width: 100%;
   height: 100%;
@@ -264,7 +254,6 @@ body {
 .header__welcome {
   margin-right: 5px;
 }
-
 .header__logout {
   margin-left: 20px;
 }
@@ -283,7 +272,7 @@ body {
   font-size: 1.625rem;
   font-weight: 600;
 }
-@media (max-width: 26.25rem) {
+@media (max-width:420px) {
   .sidebar.close .nav-links li .sub-menu{
     display: none;
   }
@@ -327,7 +316,6 @@ body {
 .table th {
   font-size: .8rem;
 }
-
 
 .contenido__button {
   position: absolute;
@@ -393,16 +381,6 @@ textarea{
   background-color: hsla(220, 80%, 79%);
 }
 
-/* Titutlo de bienvenida header */
-.derecha{
-  padding-right: 3.125rem;
-  font-size: 22.4px;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-}
-
-
 .form{
   position: absolute;
   margin-left: 7.5rem;
@@ -412,49 +390,6 @@ textarea{
 
 .contenido-report{
   position: absolute;
-}
-
-
-.listar-audience .table,
-.listar-category .table,
-.listar-client .table,
-.listar-message .table,
-.listar-reservation .table{
-  position: absolute;
-  margin-left: 7.5rem;
-  margin-top: 9.375rem;
-  max-width: 12.5rem;
-  
-}
-
-
-.listar-audience,
-.listar-category,
-.listar-client,
-.listar-message,
-.listar-reservation{
-  position: absolute;
-
-}
-
-.input-reservation.date{
-  margin-top: 3.125rem;
-}
-
-.listar-date .table,
-.listar-status .table,
-.listar-clientes .table{
-  position: absolute;
-  margin-top: 3.125rem;
-}
-
-.report{
-  width: 12.5rem;
-}
-
-.report.date{
-  margin-left: 18.75rem;
-  margin-top: 5rem;
 }
 
 
