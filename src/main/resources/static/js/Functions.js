@@ -20,6 +20,7 @@ function nameOAuth2Validate() {
                 window.location.href="index.html";
             }else{
                 $("#user").html(request.name);
+                $("#userSidebar").html(request.name);
             }  
             console.log(request)
         }
@@ -38,6 +39,7 @@ let sidebar = document.querySelector(".sidebar");
 let sidebarBtn = document.querySelector(".bx-menu");
 sidebarBtn.addEventListener("click", () => {
     sidebar.classList.toggle("close");
+    sidebarBtn.classList.toggle("close-bx-menu");
 });
 
 // logout method post /logout with ajax
