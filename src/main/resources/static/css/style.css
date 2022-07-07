@@ -233,7 +233,6 @@ body {
   font-size: 12px;
 }
 
-
 /* Home section */
 .header {
   width: 100%;
@@ -257,27 +256,6 @@ body {
 .header__logout {
   margin-left: 20px;
 }
-
-.home-section .home-content .bx-menu,
-.home-section .home-content .text{
-  color: #11101d;
-  font-size: 2.1875rem;
-  z-index: 999;
-}
-.home-section .home-content .bx-menu{
-  margin: 0 .9375rem;
-  cursor: pointer;
-}
-.home-section .home-content .text{
-  font-size: 1.625rem;
-  font-weight: 600;
-}
-@media (max-width:420px) {
-  .sidebar.close .nav-links li .sub-menu{
-    display: none;
-  }
-}
-
 .bx-menu {
   background-color: #afc5ef;
   border-radius: 5px;
@@ -289,7 +267,6 @@ body {
   left: 5.3125rem;
   transition: all 0.5s ease;
 }
-
 .close-bx-menu {
   left: 16.875rem;
 }
@@ -298,49 +275,40 @@ body {
   margin-left: 4.875rem;
   padding: 3.125rem 2.5rem 1.25rem 2.5rem;
 }
-
 .principal__tittle {
   text-align: center;
   font-weight: 600;
 }
-
 .contenido {
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-
 .contenido__date {
   margin-top: 1.25rem;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 .contenido__date > label {
   font-weight: bold;
   margin-right: .625rem;
 }
-
 .contenido__date > input {
   margin-right: .625rem;
 }
-
 .table {
   margin-top: 7.5rem;
 }
-
 .table th {
   font-size: .8rem;
 }
-
 .contenido__button {
   position: absolute;
   right: 10px;
-  top: -50px;
+  top: 50px;
 }
-
 .contenido__button--report {
   margin: auto;
   max-width: 300px;
@@ -421,6 +389,11 @@ textarea{
 @media screen and (max-width:350px) {
   html {
     font-size: var(--fz-xs);
+  }
+}
+@media (max-width:420px) {
+  .sidebar.close .nav-links li .sub-menu{
+    display: none;
   }
 }
 @media screen and (max-width:450px) {

@@ -109,24 +109,25 @@
 
     <!-- Modal Agregar-->
     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-    aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="staticBackdropLabel">Categoria</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <div class="formulario-category">
-            <div class="input-category">
-              <input type="number" id="categoryID" placeholder="id">
-              <p>Nombre <input type="text" id="caName" placeholder="Nombre Categoria"></p>
-              <p>Descripcion <textarea id="caDescription" rows="5" cols="20" placeholder="Descripcion"></textarea></p>
-            </div>
+      aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">Categoria</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-            <button type="button" class="btn btn-primary" onclick="agregarCategory()">Agregar</button>
+          <div class="modal-body">
+            <div class="formulario-category">
+              <div class="input-category">
+                <input type="number" id="categoryID" placeholder="id">
+                <p>Nombre <input type="text" id="caName" placeholder="Nombre Categoria"></p>
+                <p>Descripcion <textarea id="caDescription" rows="5" cols="20" placeholder="Descripcion"></textarea></p>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+              <button type="button" class="btn btn-primary" onclick="agregarCategory()">Agregar</button>
+            </div>
           </div>
         </div>
       </div>
@@ -134,25 +135,26 @@
 
     <!-- Modal Editar-->
     <div class="modal fade" id="editar" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-    aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="staticBackdropLabel">Editar categoria</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <div class="formulario-category">
-            <div class="input-category">
-              <input type="number" id="ccategoryID" placeholder="id">
-              <p>Nombre <input type="text" id="ccaName" placeholder="Nombre Categoria"></p>
-              <p>Descripcion <textarea id="ccaDescription" rows="5" cols="20" placeholder="Descripcion"></textarea>
-              </p>
-            </div>
+      aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">Editar categoria</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-            <div id="botonUpdateCategory"></div>
+          <div class="modal-body">
+            <div class="formulario-category">
+              <div class="input-category">
+                <input type="number" id="ccategoryID" placeholder="id">
+                <p>Nombre <input type="text" id="ccaName" placeholder="Nombre Categoria"></p>
+                <p>Descripcion <textarea id="ccaDescription" rows="5" cols="20" placeholder="Descripcion"></textarea>
+                </p>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+              <div id="botonUpdateCategory"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -162,14 +164,15 @@
       <h1 class="principal__tittle">Categorias</h1>
       <div class="contenido">
         <!-- Button trigger modal Agregar-->
-        <button type="button" class="btn btn-primary contenido__button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+        <button type="button" class="btn btn-primary contenido__button" data-bs-toggle="modal"
+          data-bs-target="#staticBackdrop">
           Agregar Categoria
         </button>
         <!-- Tabla -->
         <div id="listadoCategory"></div>
       </div>
     </div>
-    
+
   </section>
 
   <!-- Option 1: Bootstrap Bundle with Popper -->
