@@ -334,13 +334,11 @@ body {
   width: 100%!important;
 }
 .modal-open {
-  margin: auto!important;
   padding-right: 0px!important;
   min-width: fit-content!important;
 }
 .modal-content{
   margin: auto!important;
-  margin-left: 90px!important;
   margin-top: 6.25rem!important;
   max-width: 25rem!important;
 }
@@ -419,16 +417,12 @@ textarea{
     margin-top: .9375rem;
   }
 }
-@media screen and (max-width:450px) {
+@media screen and (max-width:550px) {
   body,html {
     min-width: fit-content;
   }
   .modal-content{
-    max-width: 23rem!important;
-  }
-  .table td, .table .btn{
-    font-size: .7rem;
-    vertical-align: middle;
+    max-width: 22rem!important;
   }
 }
 @media (max-width:420px) {
@@ -440,6 +434,13 @@ textarea{
   }
   .header__welcome{
     display: none;
+  }
+  .table th {
+    font-size: .6rem;
+  }
+  .table td, .table .btn{
+    font-size: .5rem;
+    vertical-align: middle;
   }
 }
 @media screen and (max-width:350px) {
