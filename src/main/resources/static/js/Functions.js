@@ -6,6 +6,7 @@ $(document).ready(function () {
     } else {
         var userJS = JSON.parse(userJSON)
         $("#user").html(userJS.name);
+        $("#userSidebar").html(request.name);
     }
 });
 

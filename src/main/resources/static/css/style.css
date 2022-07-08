@@ -223,7 +223,7 @@ body {
 .sidebar .profile-details .profile_name,
 .sidebar .profile-details .job{
   color: #fff;
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 500;
   white-space: nowrap;
 }
@@ -233,7 +233,7 @@ body {
   display: none;
 }
 .sidebar .profile-details .job{
-  font-size: 12px;
+  font-size: .75rem;
 }
 
 /* Home section */
@@ -259,14 +259,14 @@ body {
   font-weight: bold;
 }
 .header__welcome {
-  margin-right: 5px;
+  margin-right: .3125rem;
 }
 .header__logout {
-  margin-left: 20px;
+  margin-left: 1.25rem;
 }
 .bx-menu {
   background-color: #afc5ef;
-  border-radius: 5px;
+  border-radius: .3125rem;
   position: relative;
   color: black;
   cursor: pointer;
@@ -314,12 +314,12 @@ body {
 }
 .contenido__button {
   margin: auto;
-  margin-top: 20px;
+  margin-top: 1.25rem;
   width: 200px;
 }
 .contenido__button--report {
   margin: auto;
-  max-width: 300px;
+  max-width: 18.75rem;
   margin-top: 1.875rem;
   position: relative;
   top: 0;
@@ -340,6 +340,7 @@ body {
 }
 .modal-content{
   margin: auto!important;
+  margin-left: 90px!important;
   margin-top: 6.25rem!important;
   max-width: 25rem!important;
 }
@@ -404,7 +405,7 @@ textarea{
   .contenido {
     display: flex;
     flex-direction: column;
-    width: 60rem;
+    max-width: 60rem;
   }
 }
 @media screen and (max-width:768px) {
@@ -436,6 +437,9 @@ textarea{
   }
   .principal{
     padding: 2.5rem 1.125rem .625rem 1.125rem;
+  }
+  .header__welcome{
+    display: none;
   }
 }
 @media screen and (max-width:350px) {
