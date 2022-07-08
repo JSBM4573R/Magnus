@@ -2,126 +2,124 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="img/ReservationLogo.png">
-    <title>Login</title>
-    <!-- <base href="/" /> -->
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <!--Estilos-->
-    <link rel="stylesheet" href="css/styleLogin.css">
-    <!-- Fontawesome -->
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="img/ReservationLogo.png">
+  <title>Login</title>
+  <!-- <base href="/" /> -->
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <!--Estilos-->
+  <link rel="stylesheet" href="css/styleLogin.css">
+  <!-- Fontawesome -->
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 </head>
 
 <body>
-    <main>
-        <!-- <div class="error" style="color: white; padding: 3px; background-color: red; text-align: center;"></div> -->
-        <div class="cont-tarjeta">
-            <h1>Inicio de Sesión</h1>
-            <div class="cont-tarjeta__logo">
-                <img src="./img/ReservationLogo.png" alt="logo">
+  <main>
+    <!-- <div class="error" style="color: white; padding: 3px; background-color: red; text-align: center;"></div> -->
+    <div class="cont-tarjeta">
+      <h1>Inicio de Sesión</h1>
+      <div class="cont-tarjeta__logo">
+        <img src="./img/ReservationLogo.png" alt="logo">
+      </div>
+      <form action="" class="needs-validation" novalidate>
+        <div class="content-form-login">
+          <div class="position-relative">
+            <label for="email" class="form-label">Correo:</label>
+            <input type="email" id="user_email" name="user_email" placeholder="Tu correo"
+              class="form-control user_password" required>
+            <div class="invalid-tooltip">
+              Porfavor ingresa un correo valido
             </div>
-            <form action="" class="needs-validation" novalidate>
-                <div class="content-form-login">
-                    <div class="position-relative">
-                        <label for="email" class="form-label">Correo:</label>
-                        <input type="email" id="user_email" name="user_email" placeholder="Tu correo"
-                            class="form-control user_password" required>
-                        <div class="invalid-tooltip">
-                            Porfavor ingresa un correo valido
-                        </div>
-                    </div>
-                    <div class="position-relative">
-                        <label for="password" class="form-label">Contraseña:</label>
-                        <div class="pw-container">
-                            <input type="password" id="user_password" name="user_password" placeholder="Tu contraseña"
-                                class="form-control user_password" required>
-                            <img src="img/eye-solid.svg" alt="" class="icon-pw" id="eye">
-                            <div class="invalid-tooltip">
-                                Porfavor ingresa tu contraseña
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="content-form-footer">
-                    <button id="validate" type="submit" class="btn btn-primary">Ingresar</button>
-                </div>
-            </form>
-            <div class="social">
-                <a href="/oauth2/authorization/github">Ingresa con GitHub
-                    <img style="height: 25px; width: 25px; margin-left: 8px;" src="img/github.png" alt="GitHub"></a>
+          </div>
+          <div class="position-relative">
+            <label for="password" class="form-label">Contraseña:</label>
+            <div class="pw-container">
+              <input type="password" id="user_password" name="user_password" placeholder="Tu contraseña"
+                class="form-control user_password" required>
+              <img src="img/eye-solid.svg" alt="" class="icon-pw" id="eye">
+              <div class="invalid-tooltip">
+                Porfavor ingresa tu contraseña
+              </div>
             </div>
-            <div class="cont-tarjeta-footer">
-                <p>¿No tienes una cuenta? <button type="button" data-bs-toggle="modal" data-bs-target="#modalRegister"
-                        style="border: none; ">
-                        Registrate aquí
-                    </button></p>
-            </div>
+          </div>
         </div>
-    </main>
-
-    <!-- Modal Register -->
-    <div class="modal fade" id="modalRegister" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" style="width: 400px;">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Registro</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <form action="GET" class="needs-validation" novalidate>
-                    <div class="modal-body" style="display: flex; justify-content: center; flex-direction: column;">
-                        <div class="content-form">
-                            <div>
-                                <label for="user_name_register" class="form-label">Nombre:</label>
-                                <input type="text" id="user_name_register" placeholder="Tu nombre" class="form-control"
-                                    required>
-                            </div>
-                            <div>
-                                <label for="user_email_register" class="form-label">Correo:</label>
-                                <input type="email" id="user_email_register" placeholder="Tu correo"
-                                    class="form-control" required>
-                            </div>
-                            <div>
-                                <label for="user_password_register" class="form-label">Tu contraseña:</label>
-                                <input type="password" id="user_password_register" placeholder="Tu contraseña"
-                                    class="form-control" required>
-                            </div>
-                            <div>
-                                <label for="user_confirmPassword_register" class="form-label">Confirma tu
-                                    contraseña:</label>
-                                <input type="password" id="user_confirmPassword_register"
-                                    placeholder="Confirma Tu contraseña" class="form-control" required>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal-footer" style="display: flex; justify-content:center">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                        <button type="button" class="btn btn-primary" onclick="validateRegister()">Registrar</button>
-                    </div>
-                </form>
-            </div>
+        <div class="content-form-footer">
+          <button id="validate" type="submit" class="btn btn-primary">Ingresar</button>
         </div>
+      </form>
+      <div class="social">
+        <a href="/oauth2/authorization/github">Ingresa con GitHub
+          <img style="height: 25px; width: 25px; margin-left: 8px;" src="img/github.png" alt="GitHub"></a>
+      </div>
+      <div class="cont-tarjeta-footer">
+        <p>¿No tienes una cuenta? <button type="button" data-bs-toggle="modal" data-bs-target="#modalRegister"
+            style="border: none; ">
+            Registrate aquí
+          </button></p>
+      </div>
     </div>
+  </main>
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
-    </script>
-    <!-- Sweet Alert -->
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <!-- Jquery -->
-    <script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
-    <script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <!-- Fontawesome -->
-    <script src="https://kit.fontawesome.com/2cb25f2c39.js" crossorigin="anonymous"></script>
-    <!-- functions -->
-    <script src="js/FuntionScriptLogin.js"></script>
+  <!-- Modal Register -->
+  <div class="modal fade" id="modalRegister" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" style="width: 400px;">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Registro</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <form action="GET" class="needs-validation" novalidate>
+          <div class="modal-body" style="display: flex; justify-content: center; flex-direction: column;">
+            <div class="content-form">
+              <div>
+                <label for="user_name_register" class="form-label">Nombre:</label>
+                <input type="text" id="user_name_register" placeholder="Tu nombre" class="form-control" required>
+              </div>
+              <div>
+                <label for="user_email_register" class="form-label">Correo:</label>
+                <input type="email" id="user_email_register" placeholder="Tu correo" class="form-control" required>
+              </div>
+              <div>
+                <label for="user_password_register" class="form-label">Tu contraseña:</label>
+                <input type="password" id="user_password_register" placeholder="Tu contraseña" class="form-control"
+                  required>
+              </div>
+              <div>
+                <label for="user_confirmPassword_register" class="form-label">Confirma tu
+                  contraseña:</label>
+                <input type="password" id="user_confirmPassword_register" placeholder="Confirma Tu contraseña"
+                  class="form-control" required>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer" style="display: flex; justify-content:center">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-primary" onclick="validateRegister()">Registrar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+  </script>
+  <!-- Sweet Alert -->
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <!-- Jquery -->
+  <script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
+  <script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- Fontawesome -->
+  <script src="https://kit.fontawesome.com/2cb25f2c39.js" crossorigin="anonymous"></script>
+  <!-- functions -->
+  <script src="js/FuntionScriptLogin.js"></script>
 </body>
 
 </html>
