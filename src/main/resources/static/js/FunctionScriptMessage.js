@@ -17,7 +17,7 @@ function agregarMessage() {
             type:"POST",
             contentType:"application/JSON; charset=utf-8",
             success:function (respuesta){
-                console.log(respuesta);
+                // console.log(respuesta);
                 setTimeout('window.location.reload()',3500);
                 Swal.fire({
                     icon: 'success',
@@ -25,7 +25,7 @@ function agregarMessage() {
                 });
             },
             error:function(xhr, status){
-                console.log(status);
+                // console.log(status);
                 Swal.fire({
                     icon: 'error',
                     title: 'Error',
@@ -44,11 +44,11 @@ function listarMessage() {
         Type:"GET",
         dataType:"json",
         success:function (respuesta) {
-            console.log(respuesta);
+            // console.log(respuesta);
             listarRespuestaMessage(respuesta);
         },
         error:function (xhr, status) {
-            console.log(status);
+            // console.log(status);
             Swal.fire({
                 icon: 'error',
                 title: 'Error',
@@ -101,7 +101,7 @@ function editarRegistroMessage(MessageID) {
             $("#select1-Maudience").val(items.audience.id);
         },
         error:function(xhr, status){
-            console.log(status);
+            // console.log(status);
             Swal.fire({
                 icon: 'error',
                 title: 'Error',
@@ -124,7 +124,7 @@ function actualizarRegistroMessage() {
         type:'PUT',
         contentType:'application/JSON',
         success:function (respuesta) {
-            console.log(respuesta);
+            // console.log(respuesta);
             listarMessage();
             Swal.fire({
                 icon: 'success',
@@ -135,7 +135,7 @@ function actualizarRegistroMessage() {
             // $("#messagetext").val("");
         },
         error:function(xhr, status){
-            console.log(status);
+            // console.log(status);
             Swal.fire({
                 icon: 'error',
                 title: 'Error',
@@ -163,7 +163,7 @@ function borrarRegistroMessage(MessageID) {
             });
         },
         error:function(xhr, status){
-            console.log(status);
+            // console.log(status);
             Swal.fire({
                 icon: 'error',
                 title: 'Error',

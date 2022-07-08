@@ -56,11 +56,11 @@ function Login() {
             Type: "GET",
             dataType: "JSON",
             success: function (respuesta) {
-                console.log(respuesta);
+                // console.log(respuesta);
                 validateCredentials(respuesta);
             },
             error: function (xhr, status) {
-                console.log(status);
+                // console.log(status);
             }
         });
     }
@@ -86,11 +86,11 @@ login.addEventListener("click", (e) => {
             Type: "GET",
             dataType: "JSON",
             success: function (respuesta) {
-                console.log(respuesta);
+                // console.log(respuesta);
                 validateCredentials(respuesta);
             },
             error: function (xhr, status) {
-                console.log(status);
+                // console.log(status);
             }
         });
     }
@@ -137,7 +137,7 @@ function registrar() {
                     contentType: 'application/JSON; charset=utf-8',
                     data: datosPeticion,
                     success: function (respuesta) {
-                        console.log(respuesta)
+                        // console.log(respuesta)
                         $("#user_name_register").val("")
                         $('#user_email_register').val("")
                         $('#user_password_register').val("")
@@ -145,7 +145,7 @@ function registrar() {
                         // $('#modalRegister').modal('hide')
                     },
                     error: function (xhr, status) {
-                        console.log(status)
+                        // console.log(status)
                     }
                 })
                 window.location.reload();
@@ -233,7 +233,7 @@ function validateRegister() {
             }
         },
         error: function (status) {
-            console.log(status)
+            // console.log(status)
         }
     });
 }

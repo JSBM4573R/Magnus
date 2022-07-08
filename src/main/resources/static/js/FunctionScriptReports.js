@@ -1,11 +1,11 @@
 function traerReporteStatus() {
-    console.log("test");
+    // console.log("test");
     $.ajax({
         url: "http://158.101.30.210:8080/api/Reservation/report-status",
         type: "GET",
         datatype: "JSON",
         success: function (respuesta) {
-            console.log(respuesta);
+            // console.log(respuesta);
             pintarRespuesta(respuesta);
         }
     });
@@ -35,14 +35,14 @@ function traerReporteDate() {
      }else{
         var fechaInicio = document.getElementById("RstarDate").value;
         var fechaCierre = document.getElementById("RdevolutionDate").value;
-        console.log(fechaInicio);
-        console.log(fechaCierre);
+        // console.log(fechaInicio);
+        // console.log(fechaCierre);
         $.ajax({
             url: "http://158.101.30.210:8080/api/Reservation/report-dates/" + fechaInicio + "/" + fechaCierre,
             type: "GET",
             datatype: "JSON",
             success: function (respuesta) {
-                console.log(respuesta);
+                // console.log(respuesta);
                 pintarRespuestaDate(respuesta);
             }
         });
@@ -73,7 +73,7 @@ function traerReporteClientes() {
         type: "GET",
         datatype: "JSON",
         success: function (respuesta) {
-            console.log(respuesta);
+            // console.log(respuesta);
             pintarRespuestaClientes(respuesta);
         }
     });

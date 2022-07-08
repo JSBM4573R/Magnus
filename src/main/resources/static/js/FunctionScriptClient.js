@@ -18,7 +18,7 @@ function agregarClient() {
             type:"POST",
             contentType:"application/JSON; charset=utf-8",
             success:function (respuesta){
-                console.log(respuesta);
+                // console.log(respuesta);
                 setTimeout('window.location.reload()',3500);
                 Swal.fire({
                     icon: 'success',
@@ -26,7 +26,7 @@ function agregarClient() {
                 });
             },
             error:function(xhr, status){
-                console.log(status);
+                // console.log(status);
                 Swal.fire({
                     icon: 'error',
                     title: 'Error',
@@ -45,11 +45,11 @@ function listarClient() {
         Type:"GET",
         dataType:"json",
         success:function (respuesta) {
-            console.log(respuesta);
+            // console.log(respuesta);
             listarRespuestaClient(respuesta);
         },
         error:function (xhr, status) {
-            console.log(status);
+            // console.log(status);
             Swal.fire({
                 icon: 'error',
                 title: 'Error',
@@ -91,7 +91,7 @@ function editarRegistroClient(ClientID) {
         type:'GET',
         dataType:'json',
         success:function (respuesta) {
-            console.log(respuesta);
+            // console.log(respuesta);
             var items=respuesta;
             $("#CClientID").val(items.idClient);
             $("#Cemail").val(items.email);
@@ -100,7 +100,7 @@ function editarRegistroClient(ClientID) {
             $("#Cage").val(items.age);
         },
         error:function(xhr, status){
-            console.log(status);
+            // console.log(status);
             Swal.fire({
                 icon: 'error',
                 title: 'Error',
@@ -125,7 +125,7 @@ function actualizarRegistroClient() {
         contentType:'application/JSON',
 
         success:function (respuesta) {
-            console.log(respuesta);
+            // console.log(respuesta);
             listarClient();
             Swal.fire({
                 icon: 'success',
@@ -139,7 +139,7 @@ function actualizarRegistroClient() {
             // $("#age").val("");
         },
         error:function(xhr, status){
-            console.log(status);
+            // console.log(status);
             Swal.fire({
                 icon: 'error',
                 title: 'Error',
@@ -167,7 +167,7 @@ function borrarRegistroClient(ClientID) {
             });
         },
         error:function(xhr, status){
-            console.log(status);
+            // console.log(status);
             Swal.fire({
                 icon: 'error',
                 title: 'Error',
@@ -177,13 +177,13 @@ function borrarRegistroClient(ClientID) {
 }
 
 function autoInicioCliente() {
-    console.log("Se esta ejecutando client...")
+    // console.log("Se esta ejecutando client...")
     $.ajax({
         url:"http://158.101.30.210:8080/api/Client/all",
         datatype:"JSON",
         Type:"GET",
         success:function(respuesta){
-            console.log(respuesta);
+            // console.log(respuesta);
             let $select1=$("#select1-client");
             let $select2=$("#select2-client");
             let $select3=$("#select1-Mclient");
@@ -196,7 +196,7 @@ function autoInicioCliente() {
             });
         },
         error:function(xhr, status){
-            console.log(status);
+            // console.log(status);
             Swal.fire({
                 icon: 'error',
                 title: 'Error',

@@ -20,7 +20,7 @@ function agregarAuditorio() {
             dataType: 'json',
             contentType:"application/JSON; charset=utf-8",
             success:function (respuesta){
-                console.log(respuesta);
+                // console.log(respuesta);
                 setTimeout('window.location.reload()',3500);
                 Swal.fire({
                     position: 'center',
@@ -32,7 +32,7 @@ function agregarAuditorio() {
             },
             
             error: function(xhr, status) {
-                console.log(status)
+                // console.log(status)
                 Swal.fire({
                     icon: 'error',
                     title: 'Error',
@@ -52,11 +52,11 @@ function listarAuditorio() {
         dataType:"json",
 
         success:function (respuesta) {
-            console.log(respuesta);
+            // console.log(respuesta);
             listarRespuestaAuditorio(respuesta);
         },
         error:function (xhr, status) {
-            console.log(status);
+            // console.log(status);
             Swal.fire({
                 icon: 'error',
                 title: 'Error',
@@ -108,7 +108,7 @@ function editarRegistroAuditorio(numID) {
         dataType:'json',
     
         success:function (respuesta) {
-            console.log(respuesta)
+            // console.log(respuesta)
             var item = respuesta;
 
             $("#AnumID").val(item.id);
@@ -119,7 +119,7 @@ function editarRegistroAuditorio(numID) {
             $("#select-ccategory").val(item.category.id);
         },
         error:function(xhr, status){
-            console.log(status);
+            // console.log(status);
             Swal.fire({
                 icon: 'error',
                 title: 'Error',
@@ -148,7 +148,7 @@ function actualizarRegistroAuditorio() {
         contentType: "application/JSON",
 
         success:function (respuesta) {
-            console.log(respuesta);
+            // console.log(respuesta);
             listarAuditorio();
             Swal.fire({
                 position: 'center',
@@ -187,7 +187,7 @@ function borrarRegistroAuditorio(numID) {
         dataType:'json',
 
         success:function (respuesta) {
-            console.log(respuesta);
+            // console.log(respuesta);
             listarAuditorio();
             Swal.fire({
                 position: 'center',
@@ -198,7 +198,7 @@ function borrarRegistroAuditorio(numID) {
             });
         },
         error:function(xhr, status){
-            console.log(status);
+            // console.log(status);
             Swal.fire({
                 icon: 'error',
                 title: 'Error',
@@ -208,14 +208,14 @@ function borrarRegistroAuditorio(numID) {
 }
 
 function autoRelacionAuditorio() {
-    console.log("Se esta ejecutando Auditorio...")
+    // console.log("Se esta ejecutando Auditorio...")
     $.ajax({
         url:"http://158.101.30.210:8080/api/Audience/all",
         type:"GET",
         datatype:"JSON",
         
         success:function (respuesta) {
-            console.log(respuesta);
+            // console.log(respuesta);
             let $select1=$("#select1-audience");
             let $select2=$("#select2-audience");
             let $select3=$("#select1-Maudience");
@@ -228,7 +228,7 @@ function autoRelacionAuditorio() {
             });
         },
         error:function(xhr, status){
-            console.log(status);
+            // console.log(status);
             Swal.fire({
                 icon: 'error',
                 title: 'Error',

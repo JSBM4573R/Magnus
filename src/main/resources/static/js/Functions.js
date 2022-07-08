@@ -6,7 +6,7 @@ $(document).ready(function () {
     } else {
         var userJS = JSON.parse(userJSON)
         $("#user").html(userJS.name);
-        $("#userSidebar").html(request.name);
+        $("#userSidebar").html(userJS.name);
     }
 });
 
@@ -23,7 +23,7 @@ function nameOAuth2Validate() {
                 $("#user").html(request.name);
                 $("#userSidebar").html(request.name);
             }  
-            console.log(request)
+            // console.log(request)
         }
     });
 }
@@ -49,7 +49,7 @@ function logoutPost() {
         url:`http://158.101.30.210:8080/logout`,
         type:'post',
         success:function(request) {
-            console.log(request)
+            // console.log(request)
         }
     });
 }

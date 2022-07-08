@@ -19,7 +19,7 @@ function agregarReservation() {
             type:"POST",
             contentType:"application/JSON",
             success:function (respuesta){
-                console.log(respuesta);
+                // console.log(respuesta);
                 setTimeout('window.location.reload()',3500);
                 Swal.fire({
                     icon: 'success',
@@ -27,7 +27,7 @@ function agregarReservation() {
                 });
             },
             error:function(xhr, status){
-                console.log(status)
+                // console.log(status)
                 Swal.fire({
                     icon: 'error',
                     title: 'Error',
@@ -43,11 +43,11 @@ function listarReservation() {
         Type:"GET",
         dataType:"json",
         success:function (respuesta) {
-            console.log(respuesta);
+            // console.log(respuesta);
             listarRespuestaReservation(respuesta);
         },
         error:function (xhr, status) {
-            console.log(status)
+            // console.log(status)
             Swal.fire({
                 icon: 'error',
                 title: 'Error',
@@ -105,7 +105,7 @@ function editarRegistroReservation(ReservationID) {
             $("#select2-Raudience").val(items.audience.id);
         },
         error:function(xhr, status){
-            console.log(status)
+            // console.log(status)
             Swal.fire({
                 icon: 'error',
                 title: 'Error',
@@ -137,7 +137,7 @@ function actualizarRegistroReservation() {
             });
         },
         error:function(xhr, status){
-            console.log(status)
+            // console.log(status)
             Swal.fire({
                 icon: 'error',
                 title: 'Error',
@@ -164,7 +164,7 @@ function borrarRegistroReservation(reservationID) {
             });
         },
         error:function(xhr, status){
-            console.log(status)
+            // console.log(status)
             Swal.fire({
                 icon: 'error',
                 title: 'Error',

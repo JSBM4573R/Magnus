@@ -27,7 +27,7 @@ function agregarCategory() {
                 });
             },
             error:function(xhr, status){
-                console.log(status);
+                // console.log(status);
                 Swal.fire({
                     icon: 'error',
                     title: 'Error',
@@ -45,11 +45,11 @@ function listarCategory() {
         Type:"GET",
         dataType:"json",
         success:function (respuesta) {
-            console.log(respuesta);
+            // console.log(respuesta);
             listarRespuestaCategory(respuesta);
         },
         error:function (xhr, status) {
-            console.log(status);
+            // console.log(status);
             Swal.fire({
                 icon: 'error',
                 title: 'Error',
@@ -98,7 +98,7 @@ function editarRegistroCategory(CategoryID) {
             $("#ccaDescription").val(items.description);
         },
         error:function(xhr, status){
-            console.log(status);
+            // console.log(status);
             Swal.fire({
                 icon: 'error',
                 title: 'Error',
@@ -121,7 +121,7 @@ function actualizarRegistroCategory() {
         contentType:'application/JSON',
 
         success:function (respuesta) {
-            console.log(respuesta);
+            // console.log(respuesta);
             listarCategory();
             Swal.fire({
                 position: 'center',
@@ -135,7 +135,7 @@ function actualizarRegistroCategory() {
             // $("#ccaDescription").val("");
         },
         error:function(xhr, status){
-            console.log(status);
+            // console.log(status);
             Swal.fire({
                 icon: 'error',
                 title: 'Error',
@@ -156,7 +156,7 @@ function borrarRegistroCategory(CategoryID) {
         contentType:"application/JSON",
         dataType:'json',
         success:function (respuesta) {
-            console.log(respuesta);
+            // console.log(respuesta);
             listarCategory();
             Swal.fire({
                 position: 'center',
@@ -167,7 +167,7 @@ function borrarRegistroCategory(CategoryID) {
             });
         },
         error:function(xhr, status){
-            console.log(status);
+            // console.log(status);
             Swal.fire({
                 icon: 'error',
                 title: 'Error',
@@ -177,13 +177,13 @@ function borrarRegistroCategory(CategoryID) {
 }
 
 function autoInicioCategoria(){
-    console.log("se esta ejecutando category...")
+    // console.log("se esta ejecutando category...")
     $.ajax({
         url:"http://158.101.30.210:8080/api/Category/all",
         type:"GET",
         datatype:"JSON",
         success:function(respuesta){
-            console.log(respuesta);
+            // console.log(respuesta);
             let $select1 = $("#select-category");
             let $select2 = $("#select-ccategory")
             $.each(respuesta, function (id, name) {
